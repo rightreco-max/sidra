@@ -1,0 +1,45 @@
+# Nova — Telegram Personality Bot (Gemini)
+
+A Telegram bot powered by Google Gemini free tier that chats with a hardcoded personality ("Nova" — witty, warm, slightly sarcastic).
+
+## Setup
+
+### 1. Get your keys
+
+| Key | Where |
+|-----|-------|
+| **Telegram Bot Token** | Message [@BotFather](https://t.me/BotFather) on Telegram → `/newbot` → copy the token |
+| **Gemini API Key** | https://aistudio.google.com/app/apikey → Create API key (free tier) |
+
+### 2. Configure
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and paste in your two keys.
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run
+
+```bash
+python bot.py
+```
+
+The bot will start polling Telegram. Open your bot in Telegram and send it a message!
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `/start` | Introduce Nova & reset conversation |
+| `/reset` | Wipe chat history and start fresh |
+
+## Changing the personality
+
+Edit the `PERSONALITY` string in `bot.py` — that's the system prompt sent to Gemini for every conversation.
